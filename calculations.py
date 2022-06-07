@@ -13,4 +13,4 @@ def events_per_second(df):
 
     # try catch deleting by zero
     events_per_second = df['Timestamp in seconds since the epoch'].count() / (df['Timestamp in seconds since the epoch'].max() - df['Timestamp in seconds since the epoch'].min())
-    return round(events_per_second, 2)
+    return events_per_second

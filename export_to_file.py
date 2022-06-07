@@ -11,7 +11,7 @@ def create_dictionary_to_dump(path_file):
         "Most frequent IP": cal.most_frequent_ip(df),
         "Least frequent IP": cal.least_frequent_ip(df),
         "Events per second": cal.events_per_second(df),
-        "Total amount of bytes exchanged": str(cal.total_bytes_exchanged(df))
+        "Total amount of bytes exchanged": int(cal.total_bytes_exchanged(df))
     }
 
     return dictionary

@@ -17,14 +17,12 @@ def create_dictionary_to_dump(path_file):
     return dictionary
 
 
-
-
 def export_to_file(path_file):
+
     operations_dict = create_dictionary_to_dump(path_file)
 
     json_object = json.dumps(operations_dict, indent = len(operations_dict))
 
-    # Writing to sample.json
     file_path = "data/output.json"
     with open(file_path, "w") as outfile:
         outfile.write(json_object)

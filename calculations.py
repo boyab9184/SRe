@@ -1,11 +1,16 @@
 
 def total_bytes_exchanged(df):
+
     return df['Response header size in bytes'].sum() + df['Response size in bytes'].sum()
 
+
 def most_frequent_ip(df):
+
     return df['Client IP address'].value_counts().idxmax()
 
+
 def least_frequent_ip(df):
+
     return df['Client IP address'].value_counts().idxmin()
 
 

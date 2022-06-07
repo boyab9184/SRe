@@ -1,4 +1,3 @@
-from numpy import dtype
 import pandas as pd
 
 
@@ -21,9 +20,7 @@ def parsing_access_log(file_path):
     }
 
     df = pd.read_csv(file_path, sep=' ', names=header_list,  on_bad_lines='skip', dtype=dtype_dict).drop(axis=1, columns=['1','2']).dropna()
-
     df['Response header size in bytes'] = df['Response header size in bytes'].astype(int)
     df['Response size in bytes'] = df['Response size in bytes'].astype(int)
 
-    
     return df

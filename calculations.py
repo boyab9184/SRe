@@ -17,7 +17,7 @@ def least_frequent_ip(df):
 def events_per_second(df):
 
     try:
-        events_per_second = df['Timestamp in seconds since the epoch'].count() / (df['Timestamp in seconds since the epoch'].max() - df['Timestamp in seconds since the epoch'].min())
+        events_per_second =  (df['Timestamp in seconds since the epoch'].max() - df['Timestamp in seconds since the epoch'].min()) / df['Timestamp in seconds since the epoch'].count()
     except ZeroDivisionError:
         return -1
 

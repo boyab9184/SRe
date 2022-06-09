@@ -50,9 +50,6 @@ class TestAssessment(unittest.TestCase):
     def test_events_per_second_should_return_events_devided_by_delta_sec(self):
 
         #arrange
-        df = pd.DataFrame({
-            "Timestamp in seconds since the epoch": [10, 10, 10, 10, 10, 10]
-        })
         expected = 3
         #act
         actual = events_per_second(self.df)
@@ -64,7 +61,7 @@ class TestAssessment(unittest.TestCase):
 
         #arrange
         df = pd.DataFrame({
-        "Timestamp in seconds since the epoch": [10, 10, 10, 10, 10, 10]
+            "Timestamp in seconds since the epoch": [10, 10, 10, 10, 10, 10]
         })
         expected = 6
         #act

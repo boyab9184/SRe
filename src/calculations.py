@@ -18,6 +18,5 @@ def events_per_second(df):
 
     events = df['Timestamp in seconds since the epoch'].count()
     seconds = (df['Timestamp in seconds since the epoch'].max() - df['Timestamp in seconds since the epoch'].min()) + 1
-    events_per_second = events/seconds
     
-    return events_per_second
+    return events/seconds

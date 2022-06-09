@@ -4,25 +4,24 @@ import pandas as pd
 def parsing_access_log(file_path):
 
     # assign header columns
-    header_list = ['Timestamp in seconds since the epoch', '1', '2', 'Response header size in bytes', 'Client IP address', 'HTTP response code', 'Response size in bytes', 'HTTP request method', 'URL', 'Username', 'Type of access/destination IP address', 'Response type']
+    header_list = ['Timestamp in seconds since the epoch', 'Response header size in bytes', 'Client IP address', 'HTTP response code', 
+                    'Response size in bytes', 'HTTP request method', 'URL', 'Username', 'Type of access/destination IP address', 'Response type']
 
     dtype_dict = {
-        0: str,
-        3: str,
-        4: str,
-        5: str,
-        6: str,
-        7: str,
-        8: str,
-        9: str,
-        10: str,
-        11: str
+        'Timestamp in seconds since the epoch': "float64",
+        "Response header size in bytes": "int",
+        'Client IP address': "string",
+        'HTTP response code': "string",
+        'Response size in bytes': "int",
+        'HTTP request method': "string",
+        'URL': "string",
+        'Username': "string",
+        'Type of access/destination IP address': "string",
+        'Response type': "string"
     }
 
-    df = pd.read_csv(file_path, sep=' ', names=header_list,  on_bad_lines='skip', dtype=dtype_dict).drop(axis=1, columns=['1','2']).dropna()
-    df['Response header size in bytes'] = df['Response header size in bytes'].astype('int64')
-    df['Response size in bytes'] = df['Response size in bytes'].astype('int64')
-    df['Timestamp in seconds since the epoch'] = df['Timestamp in seconds since the epoch'].astype('float64')
+    df = pd.read_csv(file_path, sep="\s+|   | ", names=header_list,  on_bad_lines='skip', dtype=dtype_dict, engine='python')
+
   
     return df
 

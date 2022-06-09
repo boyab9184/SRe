@@ -26,11 +26,18 @@ How to run the tool. There are diffent options.
    docker volume inspect bbenev-volume
    ```
 
-   * Build the image and then run it:
+   * Build the image if you cloned the repo and then run it:
 
    ```
    docker build -t bbenev-tool .
-   docker run -ti -v bbenev-volume:/tool bbenev-tool
+   docker run -ti -v bbenev-volume:/tool/outputs bbenev-tool
+   ```
+
+   * If do not want to clone the repo, build the image from the repo and then run it:
+
+   ```
+   docker build -t bbenev-tool https://github.com/boyab9184/SwissRe.git#main
+   docker run -ti -v bbenev-volume:/tool/outputs bbenev-tool
    ```
 
    *  At the end you can delete the volume:

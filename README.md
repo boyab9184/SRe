@@ -2,9 +2,9 @@
 
 This a solution for SwissRe developer assignment.
 
-How to run the tool. There are diffent options.
+How to run the tool? There are some different options.
 
-1. You will need git, python3 and pip as prerequisites. Clone that github repo, install requirements and run main.py.
+1. You will need git, python3 and pip as prerequisites. Clone that repo, install requirements and run main.py.
    ```
     mkdir Assignment_BBenev
     cd Assignment_BBenev
@@ -37,7 +37,7 @@ How to run the tool. There are diffent options.
    docker run -ti -v bbenev-volume:/tool/outputs bbenev-tool
    ```
 
-   * If do not want to clone the repo, build the image from the repo and then run it.  You can use /data/test_file.csv as data file:
+   * If you do not want to clone the repo, build the image from the repo and then run it.  You can use /data/test_file.csv as data file:
 
    ```
    docker build -t bbenev-tool https://github.com/boyab9184/SwissRe.git#main

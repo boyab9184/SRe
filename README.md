@@ -30,14 +30,14 @@ How to run the tool. There are diffent options.
    docker volume inspect bbenev-volume
    ```
 
-   * Build the image if you cloned the repo and then run it:
+   * Clone the repo and add the data file. Build the image and then run it:
 
    ```
    docker build -t bbenev-tool .
    docker run -ti -v bbenev-volume:/tool/outputs bbenev-tool
    ```
 
-   * If do not want to clone the repo, build the image from the repo and then run it:
+   * If do not want to clone the repo, build the image from the repo and then run it.  You can use /data/test_file.csv as data file:
 
    ```
    docker build -t bbenev-tool https://github.com/boyab9184/SwissRe.git#main

@@ -6,7 +6,6 @@ import create_dictionary_to_dump as dtd
 def export_to_file(file_path):
 
     # assuming all data files are in one dir
-    #!!!!! needs attention
     for filename in os.listdir(file_path):
         f = os.path.join(file_path, filename)
         # checking if it is a file

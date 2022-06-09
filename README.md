@@ -13,26 +13,28 @@ How to run the tool. There are diffent options.
     pip install -r requirements.txt
     python3 src/main.py
 ``` 
+
 2. Using Docker. The tool is stateless so you should create a volume and then mount that volume when runnung the docker image. The volume acts like a folder which you can use to store and retrieve data.
+   
    ```
      docker volume create bbenev-volume
    ```
 
-   Then inspect it:
+   * Then inspect it:
 
    ```
    docker volume inspect bbenev-volume
    ```
 
-   Build the image and then run it:
+   * Build the image and then run it:
 
    ```
    docker build -t bbenev-tool .
    docker run -ti -v bbenev-volume:/tool bbenev-tool
    ```
 
-    At the end you can delete the volume:
-    
+   *  At the end you can delete the volume:
+
     ```
     docker volume rm bbenev-volume
     ```

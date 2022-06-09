@@ -13,6 +13,10 @@ How to run the tool. There are diffent options.
     pip install -r requirements.txt
     python3 src/main.py
    ``` 
+    * to run tests
+   ```
+   python3 test/test_calculations.py
+   ```
 
 2. Using Docker. The tool is stateless so you should create a volume and then mount that volume when runnung the docker image. The volume acts like a folder which you can use to store and retrieve data.
    

@@ -17,16 +17,22 @@ How to run the tool. There are diffent options.
    ```
      docker volume create bbenev-volume
    ```
+
    Then inspect it:
+
    ```
    docker volume inspect bbenev-volume
    ```
+
    Build the image and then run it:
+
    ```
    docker build -t bbenev-tool .
    docker run -ti -v bbenev-volume:/tool bbenev-tool
    ```
+
     At the end you can delete the volume:
+    
     ```
     docker volume rm bbenev-volume
     ```

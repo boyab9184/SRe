@@ -37,7 +37,7 @@ How to run the tool? There are some different options.
    docker run -ti -v bbenev-volume:/tool/outputs bbenev-tool
    ```
 
-   * If you do not want to clone the repo, build the image from the repo and then run it.  You can use /data/test_file.csv as data file:
+   * If you do not want to clone the repo, build the image from the repo and then run it.  You can use /data/test_data.csv as data file:
 
    ```
    docker build -t bbenev-tool https://github.com/boyab9184/SwissRe.git#main

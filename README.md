@@ -50,4 +50,7 @@
    ```
    
 ####The output from access.log
+
+
+
 <img alt="Alt text" height="240" src="access.jpg" width="320"/>

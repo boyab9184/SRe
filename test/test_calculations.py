@@ -17,7 +17,7 @@ class TestAssessment(unittest.TestCase):
     })
 
 
-    def test_total_bytes_exchanged_should_return_sum_of_two_column(self):
+    def test_total_bytes_exchanged_should_return_sum_of_two_columns(self):
 
         #arrange
         expected = 32
@@ -57,7 +57,7 @@ class TestAssessment(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-    def test_events_should_return_total_events_if_all_happend_at_the_same_time(self):
+    def test_events_per_second_should_return_total_events_if_all_happend_at_the_same_time(self):
 
         #arrange
         df = pd.DataFrame({

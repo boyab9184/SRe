@@ -22,4 +22,3 @@ def parsing_access_log(file_path):
     df = pd.read_csv(file_path, sep="\s+|   | ", names=header_list, on_bad_lines='skip', dtype=dtype_dict, engine='python')
 
     return df
-

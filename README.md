@@ -1,7 +1,7 @@
 # SwissRe
 
-###This a solution for SwissRe developer assignment.
-####How to run the tool? There are some different options.
+### This a solution for SwissRe developer assignment.
+#### How to run the tool? There are some different options.
 
 1. You will need git, python3 and pip as prerequisites. Clone that repo, install requirements and run main.py.
    ```
@@ -49,7 +49,7 @@
    docker volume rm bbenev-volume
    ```
    
-####The output from access.log
+#### The output from access.log
 
 
 

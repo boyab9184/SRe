@@ -37,7 +37,7 @@ class TestAssessment(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-    def test_most_frequent_ip_should_return_ip_that_occurs_least(self):
+    def test_least_frequent_ip_should_return_ip_that_occurs_least(self):
 
         #arrange
         expected = "192.168.0.1"

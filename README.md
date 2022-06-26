@@ -1,4 +1,4 @@
-# SwissRe
+# SRe
 
 ### This a solution for SwissRe developer assignment.
 #### How to run the tool? There are some different options.
